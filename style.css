@@ -13,7 +13,7 @@
   font-family: system-ui;
 }
 html {
-  font-size: 100%;
+  font-size: 80%;
 }
 html,
 body,
@@ -28,7 +28,7 @@ main {
 }
 .col {
   width: 25%;
-  height: 50%;
+  height: 100%;
 }
 .card {
   width: 100%;
@@ -111,10 +111,11 @@ h4 {
   font-style: italic;
   font-size: 1.2rem;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   main {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
   }
   .col {
@@ -122,7 +123,7 @@ h4 {
     height: 50%;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   main {
     display: flex;
     flex-direction: row;
@@ -134,7 +135,7 @@ h4 {
     height: 50%;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   main {
     display: flex;
     flex-direction: row;
