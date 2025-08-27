@@ -63,21 +63,14 @@ export default class DevCardManager {
       let skillsDiv = document.createElement("div");
       skillsDiv.classList.add("skills-list");
 
-      let java = document.createElement("span");
-      java.classList.add("badge");
-      java.classList.add("secondary");
+      card.skills.map((skill) => {
+        let skillSpan = document.createElement("span");
+        skillSpan.classList.add("badge");
+        skillSpan.classList.add("secondary");
+        skillSpan.textContent = skill;
 
-      let aws = document.createElement("span");
-      aws.classList.add("badge");
-      aws.classList.add("secondary");
-
-      let spring = document.createElement("span");
-      spring.classList.add("badge");
-      spring.classList.add("secondary");
-
-      java.textContent = card.skills[0];
-      aws.textContent = card.skills[1];
-      spring.textContent = card.skills[2];
+        skillsDiv.append(skillSpan);
+      });
 
       // bio
       let bio = document.createElement("p");
@@ -86,7 +79,7 @@ export default class DevCardManager {
       let bioIndex = 0;
 
       // add elements
-      skillsDiv.append(java, aws, spring);
+
       cardHeader.append(devId, gradientDiv);
       cardBody.append(
         name,
